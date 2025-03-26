@@ -1,20 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
    
-    const userIcon = document.querySelector('.user-icon');
-    const userDropdown = document.querySelector('.user-dropdown');
-    
-    userIcon.addEventListener('click', function(e) {
-        e.preventDefault();
-        userDropdown.style.display = userDropdown.style.display === 'block' ? 'none' : 'block';
-        
-        document.addEventListener('click', function closeDropdown(e) {
-            if (!userIcon.contains(e.target)) {
-                userDropdown.style.display = 'none';
-                document.removeEventListener('click', closeDropdown);
-            }
-        });
-    });
-    
     function updateCountdown() {
         const now = new Date();
         const endDate = new Date(now);
@@ -36,31 +21,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     updateCountdown();
     setInterval(updateCountdown, 1000);
-
-    const productCards = document.querySelectorAll('.product-card');
-    
-    productCards.forEach(card => {
-        const addToCartBtn = card.querySelector('.add-to-cart button');
-        
-        addToCartBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-        
-            const cartBadge = document.querySelector('.cart-icon .badge');
-            let currentCount = parseInt(cartBadge.textContent);
-            cartBadge.textContent = (currentCount + 1).toString();
-            
-            alert('Product added to cart!');
-        });
-    });
-
-    const categoryLinks = document.querySelectorAll('.categories li a');
-    categoryLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            this.style.color = '#DB4444';
-        });
-        
-        link.addEventListener('mouseleave', function() {
-            this.style.color = '';
-        });
-    });
 });
