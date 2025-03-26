@@ -4,20 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exclusive</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
-    <link rel="icon" href="./img/pngtree-exclusive-stamp-vector-png-image_6742086.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
     <header>
         <div class="logo">
             <h1>Exclusive</h1>
         </div>
-        <nav>
+        <nav class="main-nav">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Contact</a></li>
@@ -30,11 +27,371 @@
             <button><i class="fas fa-search"></i></button>
         </div>
         <div class="icons">
-            <a href="#" class="icon-link"><i class="far fa-heart"></i><span class="badge">1</span></a>
-            <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i><span class="badge">2</span></a>
-            <a href="#" class="icon-link"><i class="far fa-user"></i></a>
+            <a href="#" class="icon-link"><i class="far fa-heart"></i></a>
+            <a href="#" class="icon-link cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge">2</span>
+            </a>
+            <a href="#" class="icon-link user-icon">
+                <i class="far fa-user"></i>
+                <div class="user-dropdown">
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Manage My Account</span>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-box"></i>
+                        <span>My Order</span>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-ban"></i>
+                        <span>My Cancellations</span>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-star"></i>
+                        <span>My Reviews</span>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </a>
         </div>
     </header>
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <ul class="categories">
+                    <li><a href="#">Woman's Fashion <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Men's Fashion <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Home & Lifestyle</a></li>
+                    <li><a href="#">Medicine</a></li>
+                    <li><a href="#">Sports & Outdoor</a></li>
+                    <li><a href="#">Baby's & Toys</a></li>
+                    <li><a href="#">Groceries & Pets</a></li>
+                    <li><a href="#">Health & Beauty</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="banner-slider">
+                    <div class="banner active">
+                        <div class="banner-content">
+                            <div class="apple-logo">
+                                <img src="./img/1200px-Apple_gray_logo 1.png" alt="">
+                                <span>iPhone 14 Series</span>
+                            </div>
+                            <h2>Up to 10% <br>off Voucher</h2>
+                            <a href="#" class="shop-now">Shop Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="banner-image">
+                            <img src="./img/hero_endframe__cvklg0xk3w6e_large 2.png" alt="iPhone 14">
+                        </div>
+                    </div>
+                    <div class="banner-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <div class="flash-sales">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <div class="title-badge">Today's</div>
+                            <h2>Flash Sales</h2>
+                        </div>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="days">03</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <span class="countdown-separator">:</span>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="hours">23</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <span class="countdown-separator">:</span>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="minutes">19</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                            <span class="countdown-separator">:</span>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="seconds">56</span>
+                                <span class="countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-control prev"><i class="fas fa-arrow-left"></i></button>
+                            <button class="carousel-control next"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="products-carousel">
+                        <div class="product-card">
+                            <div class="product-badge">-40%</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="quick-view-btn"><i class="far fa-eye"></i></button>
+                            </div>
+                            <div class="product-image">
+                                <img src="./img/Frame 611.png" alt="HAVIT HV-G92 Gamepad">
+                            </div>
+                            <div class="add-to-cart">
+                                <button>Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">HAVIT HV-G92 Gamepad</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$120</span>
+                                    <span class="original-price">$150</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(88)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-badge">-35%</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="quick-view-btn"><i class="far fa-eye"></i></button>
+                            </div>
+                            <div class="product-image">
+                                <img src="./img/ak-900-01-500x500 1.png" alt="AK-900 Wired Keyboard">
+                            </div>
+                            <div class="add-to-cart">
+                                <button>Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">AK-900 Wired Keyboard</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$960</span>
+                                    <span class="original-price">$1160</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-count">(75)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-badge">-30%</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="quick-view-btn"><i class="far fa-eye"></i></button>
+                            </div>
+                            <div class="product-image">
+                                <img src="./img/g27cq4-500x500 1.png" alt="IPS LCD Gaming Monitor">
+                            </div>
+                            <div class="add-to-cart">
+                                <button>Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">IPS LCD Gaming Monitor</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$370</span>
+                                    <span class="original-price">$400</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(99)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-badge">-25%</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="quick-view-btn"><i class="far fa-eye"></i></button>
+                            </div>
+                            <div class="product-image">
+                                <img src="./img/sam-moghadam-khamseh-kvmdsTrGOBM-unsplash 1.png"
+                                    alt="S-Series Comfort Chair">
+                            </div>
+                            <div class="add-to-cart">
+                                <button>Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">S-Series Comfort Chair</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$375</span>
+                                    <span class="original-price">$400</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-count">(99)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-badge">-25%</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="quick-view-btn"><i class="far fa-eye"></i></button>
+                            </div>
+                            <div class="product-image">
+                                <img src="./img/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png"
+                                    alt="">
+                            </div>
+                            <div class="add-to-cart">
+                                <button>Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">The north coat</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$260</span>
+                                    <span class="original-price">$360</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-count">(65)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-badge">-35%</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="quick-view-btn"><i class="far fa-eye"></i></button>
+                            </div>
+                            <div class="product-image">
+                                <img src="./img/ideapad-gaming-3i-01-500x500 1.png" alt="S-Series Comfort Chair">
+                            </div>
+                            <div class="add-to-cart">
+                                <button>Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">ASUS FHD Gaming Laptop</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$960</span>
+                                    <span class="original-price">$1160</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-count">(65)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-badge">-35%</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="quick-view-btn"><i class="far fa-eye"></i></button>
+                            </div>
+                            <div class="product-image">
+                                <img src="./img/547953_9C2ST_8746_001_082_0000_Light-Gucci-Savoy-medium-duffle-bag 1.png"
+                                    alt="">
+                            </div>
+                            <div class="add-to-cart">
+                                <button>Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Gucci duffle bag</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$120</span>
+                                    <span class="original-price">$150</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(88)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-badge">-40%</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="quick-view-btn"><i class="far fa-eye"></i></button>
+                            </div>
+                            <div class="product-image">
+                                <img src="./img/698717_Z8A1X_3475_001_100_0000_Light-Reversible-quilted-satin-jacket 1.png"
+                                    alt="">
+                            </div>
+                            <div class="add-to-cart">
+                                <button>Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Quilted Satin Jacket</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$750</span>
+                                    <span class="original-price">$150</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(88)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-all">
+                    <button>View All Products</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
